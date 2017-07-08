@@ -1,0 +1,37 @@
+<div>
+    <title> here: {{homeMsg}}</title>
+    <h1>{{homeMsg}}</h1>
+</div>
+
+<div>
+    <input [value] = "username" (input)="username = $event.target.value" >
+
+    <p>Hello {{username}}!</p>
+</div>
+
+<div>
+    <p>custom counter should appear here</p>
+    <custom-counter [(counter)] = "counterValue"></custom-counter>
+    <!--<custom-counter [counter] = "counterValue" (counter) = "counterValue = counter"></custom-counter>-->
+    <p>counterValue = {{counterValue}}</p>
+</div>
+
+<div>
+    <p>counter input component</p>
+    <counter-input></counter-input>
+
+</div>
+
+<div>
+    <p>Date</p>
+    <input type="text" name="test0" [(ngModel)]="test">
+    <input type="date" name="fixedInput" [(ngModel)]="testDate2" useValueAsDate>
+
+    <input type="date" name="normalInput" [(ngModel)]="testDate1">
+
+</div>
+
+<div>
+    <p>Template drive form</p>
+    <my-template-driven-form></my-template-driven-form>
+</div>
