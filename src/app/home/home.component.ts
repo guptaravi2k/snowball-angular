@@ -5,10 +5,14 @@ import { HeroService }     from '../hero-app/hero.service';
   selector: 'my-home',
   template: `
     <h1>{{title}}</h1>
-    <nav>
-      <a [routerLink]="['/heroesHome']" routerLinkActive="active">Heroes</a>
-      <a [routerLink]="['/ngbookHome']" routerLinkActive="active">ngbook</a>
-      <!--<a [routerLink]="['/home']" routerLinkActive="active">Home</a>-->
+    <nav class="navbar navbar-default">
+    <ul class="nav navbar-nav">
+        <li><a [routerLink]="['/heroesHome']" routerLinkActive="active">Heroes</a></li>
+        <li><a [routerLink]="['/ngbookHome']" routerLinkActive="active">ngbook</a></li>
+        <li><a [routerLink]="['/udamyHome']" routerLinkActive="active">Udamy</a></li>
+        <li><a [routerLink]="['/cmpDatabindingHome']" routerLinkActive="active">Cmp Databinding</a></li>
+        <li><a [routerLink]="['/gameHome']" routerLinkActive="active">Game</a></li>
+      </ul>
     </nav>
   `,
   styleUrls: ['../app.component.css'],
@@ -18,5 +22,5 @@ import { HeroService }     from '../hero-app/hero.service';
   ]
 })
 export class HomeComponent {
-  title = 'Welcome to Application Home';
+  title = 'Click an app to proceed';
 }

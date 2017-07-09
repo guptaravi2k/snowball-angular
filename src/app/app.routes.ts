@@ -5,6 +5,9 @@ import {HeroDetailComponent} from "./hero-app/hero-detail.component";
 import {HeroHomeComponent} from "./hero-app/hero-home.component";
 import {NgbookHomeComponent} from "./ngbook-app/ngbook-home.component";
 import {HomeComponent} from "./home/home.component";
+import {UdamyHomeComponent} from "./udamy-app/udamy-home.component";
+import {CmpDatabindingHomeComponent} from "./cmp-databinding/cmp-databinding-home.component";
+import {GameHomeComponent} from "./game/game-home.component";
 
 const routes: Routes = [
     {
@@ -35,6 +38,18 @@ const routes: Routes = [
     {
         path: 'ngbookHome',
         component: NgbookHomeComponent
+    },
+    {
+        path: 'udamyHome',
+        component: UdamyHomeComponent
+    },
+    {
+        path: 'cmpDatabindingHome',
+        component: CmpDatabindingHomeComponent
+    },
+    {
+        path: 'gameHome',
+        component: GameHomeComponent
     }
 ];
 

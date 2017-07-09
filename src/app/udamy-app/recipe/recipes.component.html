@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-md-5">
+    <recipe-list (recipeEmitter)="onRecipeSelect($event)"></recipe-list>
+  </div>
+  <div class="col-md-7">
+    <recipe-detail *ngIf="recipe; else infoText" [recipe] = recipe></recipe-detail>
+    <ng-template #infoText>
+      Please select a recipe.
+    </ng-template>
+  </div>
+</div>
