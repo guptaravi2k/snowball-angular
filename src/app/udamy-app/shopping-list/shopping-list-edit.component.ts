@@ -1,17 +1,15 @@
 /**
  * Created by guptar16 on 8/07/2017.
  */
-import {Component, ViewChild, ElementRef, Output, EventEmitter}       from '@angular/core';
-import {Ingredient} from "../models/Ingredient";
+import {Component, ViewChild, ElementRef} from '@angular/core';
+import {Ingredient} from '../shared/models/Ingredient';
+import {ShoppingListService} from './shopping-list.service';
 
 @Component({
   selector: 'shopping-list-edit',
   templateUrl: './shopping-list-edit.component.html'
 })
 export class ShoppingListEditComponent {
-
-  @Output()
-  ingredientEmitter = new EventEmitter<Ingredient>();
 
   @ViewChild('name')
   name: ElementRef;
@@ -20,9 +18,10 @@ export class ShoppingListEditComponent {
   amount: ElementRef;
 
 
-  onAdd() {
-    this.ingredientEmitter.emit(new Ingredient(this.name.nativeElement.value, this.amount.nativeElement.value));
+  constructor(private shoppingListService: ShoppingListService) {}
 
+  onAdd() {
+      this.shoppingListService.addIngredient(new Ingredient(this.name.nativeElement.value, this.amount.nativeElement.value));
   }
 
   onDelete() {

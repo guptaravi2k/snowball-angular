@@ -1,7 +1,7 @@
 /**
  * Created by guptar16 on 8/07/2017.
  */
-import { Component, Output, EventEmitter }       from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'udamy-header',
@@ -9,14 +9,4 @@ import { Component, Output, EventEmitter }       from '@angular/core';
 })
 export class UdamyHeaderComponent {
 
-  @Output()
-  menuSelectEvent = new EventEmitter<number>();
-
-  onRecipe() {
-    this.menuSelectEvent.emit(0);
-  }
-
-  onShoppingList() {
-    this.menuSelectEvent.emit(1);
-  }
 }

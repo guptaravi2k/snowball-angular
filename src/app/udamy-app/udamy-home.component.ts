@@ -5,13 +5,11 @@ import { Component }       from '@angular/core';
   template: `
     <h1>{{title}}</h1>
     <br>
-    <udamy-header (menuSelectEvent)="onMenuSelect($event)"></udamy-header>
+    <udamy-header></udamy-header>
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <recipes *ngIf="selectedItemId === 0"></recipes>
-          <br><br>
-          <shopping-list *ngIf="selectedItemId === 1"></shopping-list>
+          <router-outlet></router-outlet>
         </div>
       </div>
     </div>
@@ -20,9 +18,5 @@ import { Component }       from '@angular/core';
 })
 export class UdamyHomeComponent {
   title = 'Udamy Home';
-  selectedItemId: number = 0;
 
-  onMenuSelect(id:number) {
-    this.selectedItemId = id;
-  }
 }

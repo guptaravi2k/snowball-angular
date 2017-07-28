@@ -2,7 +2,9 @@
  * Created by guptar16 on 8/07/2017.
  */
 import { Component, Input, Output, EventEmitter, OnInit }       from '@angular/core';
-import {Recipe} from "../../../models/recipe";
+import {Recipe} from "../../../shared/models/recipe";
+import {RecipeService} from '../../recipe.service';
+import {Router, ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'recipe-item',
@@ -13,11 +15,15 @@ export class RecipeItemComponent {
   @Input()
   recipe: Recipe;
 
-  @Output()
-  recipeItemEmitter= new EventEmitter<Recipe>();
+  @Input()
+  recipeIndex: number;
+
+  constructor(private router:Router, private route: ActivatedRoute) {}
+/*
 
   onRecipeItemClick() {
-    this.recipeItemEmitter.emit(this.recipe)
+    this.router.navigate(['recipeDetails', this.recipeIndex], {relativeTo: this.route});
   }
+*/
 
 }

@@ -6,6 +6,8 @@ import {RecipeDetailComponent} from "./recipe/recipe-detail/recipe-detail.compon
 import {RecipeItemComponent} from "./recipe/recipe-list/recipe-item/recipe-item.component";
 import {RecipeListComponent} from "./recipe/recipe-list/recipe-list.component";
 import {RecipesComponent} from "./recipe/recipes.component";
+import {DropDownDirective} from "./shared/dropdown.directive";
+import {SelectARecipeComponent} from './recipe/recipe-list/select-a-recipe/select-a-recipe.component';
 
 
 export const UDAMY_APP_COMPONENTS =  [
@@ -16,6 +18,7 @@ export const UDAMY_APP_COMPONENTS =  [
   RecipeDetailComponent,
   RecipeItemComponent,
   RecipeListComponent,
-  RecipesComponent
-
+  RecipesComponent,
+  DropDownDirective,
+  SelectARecipeComponent
 ]

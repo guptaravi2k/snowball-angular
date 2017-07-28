@@ -12,6 +12,9 @@ import { HeroService }     from '../hero-app/hero.service';
         <li><a [routerLink]="['/udamyHome']" routerLinkActive="active">Udamy</a></li>
         <li><a [routerLink]="['/cmpDatabindingHome']" routerLinkActive="active">Cmp Databinding</a></li>
         <li><a [routerLink]="['/gameHome']" routerLinkActive="active">Game</a></li>
+        <li><a [routerLink]="['/servicesHome']" routerLinkActive="active">Services</a></li>
+        <li><a [routerLink]="['/servicesAssignmentHome']" routerLinkActive="active">Services assignment</a></li>
+        <li><a [routerLink]="['/routingStartHome']" routerLinkActive="active">Routing Start</a></li>
       </ul>
     </nav>
   `,

@@ -1,11 +1,18 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container">
 
-  <h1>welcome to {{ title }}</h1>
-  <nav>
-    <a [routerLink]="['/home']" routerLinkActive="active">Home</a>
-  </nav>
-  <hr>
+  <h4>Welcome to {{ title }}</h4>
+  <ul class="nav nav-tabs">
+    <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions] = "{exact: true}"><a [routerLink]="['/heroesHome']" >Heroes</a></li>
+    <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions] = "{exact: true}"><a [routerLink]="['/ngbookHome']" >ngbook</a></li>
+    <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions] = "{exact: true}"><a [routerLink]="['/udamyHome']" >Udamy</a></li>
+    <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions] = "{exact: true}"><a [routerLink]="['/cmpDatabindingHome']">Cmp Databinding</a></li>
+    <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions] = "{exact: true}"><a [routerLink]="['/gameHome']">Game</a></li>
+    <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions] = "{exact: true}"><a [routerLink]="['/servicesHome']">Services</a></li>
+    <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions] = "{exact: true}"><a [routerLink]="['/servicesAssignmentHome']">Services assignment</a></li>
+    <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions] = "{exact: true}"><a [routerLink]="['/routingStartApp']">Routing Start</a></li>
+  </ul>
+  <br>
   <router-outlet></router-outlet>
   <!--<my-home></my-home>-->
 </div>
